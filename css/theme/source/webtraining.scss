@@ -3,17 +3,12 @@
  *
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
-
-
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
-
-
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #354658;
@@ -29,21 +24,73 @@ $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
 $linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
-$heading2Size: 1.6em;
-$heading3Size: 1.3em;
+$heading2Size: 1.4em;
+$heading3Size: 1.2em;
 $heading4Size: 1.0em;
 
 section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #000;
-	}
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #000;
+  }
 }
 
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal {
+  .header {
+    .left {
+      position: absolute;
+      top: 0;
+      left: 1em;
+      font-size: 0.6em;
+    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 1em;
+      font-size: 0.6em;
+    }
+  }
+
+  .footer {
+    .left {
+      position: absolute;
+      bottom: 1em;
+      left: 2em;
+      font-size: 1em;
+    }
+
+    .right {
+      position: absolute;
+      bottom: 1em;
+      right: 2em;
+      font-size: 1em;
+    }
+  }
+
+  pre {
+    box-shadow: none;
+
+    code {
+      background: lighten($backgroundColor, 25%);
+      border: 6px solid lighten($backgroundColor, 15%);
+    }
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+    color: white;
+    text-transform: none;
+  }
+}
